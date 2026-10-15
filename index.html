@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Aravind Ajithkumar | Robotics, CAD and Simulation</title>
+  <meta name="description" content="Mechanical engineer and M.Sc. student at FAU Erlangen-Nürnberg, building robotic tools and robot simulations. Projects, skills and CV.">
+
+  <!-- Link preview (LinkedIn, WhatsApp, Slack). Image must be an absolute URL. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aravindajithkumar02.github.io/">
+  <meta property="og:title" content="Aravind Ajithkumar | Robotics, CAD and Simulation">
+  <meta property="og:description" content="Mechanical engineer and M.Sc. student at FAU building robotic tools and robot simulations. Projects, skills and CV.">
+  <meta property="og:image" content="https://aravindajithkumar02.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">A. Ajithkumar</a>
+      <nav aria-label="Sections">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience" class="hide-sm">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO: drawing sheet with a live arm ============ -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="frame">
+          <div class="hero-text">
+            <div>
+              <span class="label">Portfolio · Sheet 1 of 1</span>
+              <h1>Aravind<br>Ajithkumar</h1>
+              <p class="headline">Mechanical engineer building robotic tools and robot simulations.</p>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="#projects">View projects</a>
+              <a class="btn" href="assets/Aravind_Ajithkumar_CV.pdf" target="_blank" rel="noopener">Download CV</a>
+              <a class="btn" href="#contact">Contact</a>
+            </div>
+          </div>
+
+          <div class="drawing" id="arm-stage" aria-label="Interactive drawing of a two-link robot arm that follows the pointer">
+            <canvas id="arm-canvas"></canvas>
+            <div class="readout" aria-hidden="true">
+              θ1 <b id="arm-t1">0.0°</b> &nbsp; θ2 <b id="arm-t2">0.0°</b><br>
+              <span id="arm-xz">x 0.00  z 0.00 m</span>
+            </div>
+            <span class="arm-hint">Point or drag · 2-link inverse kinematics</span>
+          </div>
+
+          <dl class="titleblock">
+            <div><dt>Discipline</dt><dd>Robotics · CAD · Control</dd></div>
+            <div><dt>Study</dt><dd>M.Sc. Electromobility-ACES, FAU</dd></div>
+            <div><dt>Based in</dt><dd>Nuremberg, Germany</dd></div>
+            <div><dt>Looking for</dt><dd>Internship / working student</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS (built from data/projects.js) ============ -->
+    <section class="block" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">01 · Projects</span>
+          <h2>What I'm building</h2>
+          <p>Status is kept current. Work in progress is marked as such. Open a project for the full details.</p>
+        </div>
+        <div class="cards" id="project-list">
+          <noscript><p>This list needs JavaScript. My projects are also on <a href="https://github.com/aravindajithkumar02">GitHub</a>.</p></noscript>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project details open in this dialog -->
+    <dialog class="detail" id="project-dialog" aria-labelledby="dialog-title">
+      <div class="detail-inner" id="dialog-body"></div>
+    </dialog>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="block" id="about">
+      <div class="wrap two-col">
+        <div class="section-head">
+          <span class="label">02 · About</span>
+          <h2>Design meets control</h2>
+        </div>
+        <div class="prose">
+          <p>I'm a mechanical engineer doing my master's in Electromobility at FAU Erlangen-Nürnberg. I work where mechanical design meets control: in my project thesis at the FAPS institute, I'm developing a lightweight, PID-controlled tape-winding tool for a UR10 robot, from CAD and 3D-printed parts to the sensing and control concept.</p>
+          <p>Alongside the thesis, I'm teaching myself NVIDIA Isaac Sim by building a KUKA KR210 palletizing cell in Python, one documented step at a time. Before my master's, I designed kaizen improvements that were implemented on an engine assembly line at Toyota Industries in Bengaluru.</p>
+          <p>I'm looking for a role where I can work on real robotic systems in industry. My German is at A2 level and improving every week.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3D PRINTING GALLERY (hidden while empty) ============ -->
+    <section class="block" id="prints" hidden>
+      <div class="wrap">
+        <div class="section-head"><span class="label">Prototyping</span><h2>3D printing</h2></div>
+        <div class="gallery" id="gallery-list"></div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="block" id="skills">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="label">03 · Skills</span>
+          <h2>Skills, with evidence</h2>
+          <p>Each group links to the work where I used it.</p>
+        </div>
+        <div class="skills">
+          <div class="skill">
+            <h3>Mechanical design and CAD</h3>
+            <p>Fusion 360, SolidWorks, Solid Edge. Mechanism design, modular assemblies, design for FDM printing.</p>
+            <p class="used">Used in: <a href="#project-winding-tool">winding tool</a>, <a href="#project-toyota-kaizen">Toyota kaizens</a></p>
+          </div>
+          <div class="skill">
+            <h3>Prototyping</h3>
+            <p>FDM printing on Creality Ender 3 S1 and Prusa XL, PrusaSlicer and Bambu Studio, PLA and PETG, screw and heat-set insert holes. Workshop basics: drilling, sawing, grinding, crimping, soldering.</p>
+            <p class="used">Used in: <a href="#project-winding-tool">winding tool</a> · workshop training at the FAPS institute</p>
+          </div>
+          <div class="skill">
+            <h3>Control and embedded</h3>
+            <p>PID control design with feedforward and anti-windup (concept stage, hardware tests pending), ESP32, Arduino, time-of-flight sensing, stepper drives.</p>
+            <p class="used">Used in: <a href="#project-winding-tool">winding tool</a>, <a href="#achievements">SPS Makeathon</a></p>
+          </div>
+          <div class="skill">
+            <h3>Robot simulation and kinematics</h3>
+            <p>NVIDIA Isaac Sim 6.1 in standalone Python, USD scene setup, PhysX rigid bodies and collisions. Two-link inverse kinematics.</p>
+            <p class="used">Used in: <a href="#project-isaac-kuka">Isaac Sim palletizing cell</a>, <a href="#top">the arm at the top of this page</a></p>
+          </div>
+          <div class="skill">
+            <h3>Programming and tools</h3>
+            <p>Python (beginner to intermediate), C++, JavaScript basics, Git and GitHub, Linux (Ubuntu, WSL2), LaTeX, MATLAB.</p>
+            <p class="used">Used in: <a href="#project-isaac-kuka">Isaac Sim</a>, <a href="#project-winding-tool">winding tool firmware</a>, this website, <a href="#education">coursework</a></p>
+          </div>
+          <div class="skill">
+            <h3>Lean manufacturing</h3>
+            <p>Standardized work sheets, muda analysis, kaizen countermeasures, Toyota Production System.</p>
+            <p class="used">Used in: <a href="#project-toyota-kaizen">Toyota internship</a></p>
+          </div>
+        </div>
+        <div class="learning">
+          <span class="label">Currently learning</span>
+          <p>ROS 2 Humble and Gazebo · German (A2 course)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE AND EDUCATION ============ -->
+    <section class="block" id="experience">
+      <div class="wrap">
+        <div class="section-head"><span class="label">04 · Experience and education</span><h2>Timeline</h2></div>
+        <ol class="timeline" reversed>
+          <li>
+            <span class="when">04/2026 – present</span>
+            <div>
+              <span class="tag">Research</span>
+              <h3>Project thesis: PID-controlled robotic winding tool</h3>
+              <p class="where">FAPS Institute for Factory Automation and Production Systems, FAU, Nuremberg</p>
+              <p class="detail"><a href="#project-winding-tool">See project</a></p>
+            </div>
+          </li>
+          <li id="education">
+            <span class="when">10/2022 – present</span>
+            <div>
+              <span class="tag">Education</span>
+              <h3>M.Sc. Electromobility-ACES</h3>
+              <p class="where">Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU)</p>
+              <p class="detail">Completed modules include Algorithms, Programming and Data Representation · Programming in C++ · Machine Learning for Engineers I and II · Robot Mechanisms and User Interfaces · Integrated Production Systems · Battery Storage Systems · Electrical Energy Storage Systems · Automotive Engineering · Fundamentals of Electrical Engineering · MATLAB and E-Powertrain lab courses.</p>
+            </div>
+          </li>
+          <li>
+            <span class="when">02/2020 – 03/2020</span>
+            <div>
+              <span class="tag">Experience</span>
+              <h3>Engineering intern</h3>
+              <p class="where">Toyota Industries Engine India, Bengaluru</p>
+              <p class="detail">Designed kaizen countermeasures for engine assembly, implemented on the line. <a href="#project-toyota-kaizen">See project</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="when">06/2016 – 09/2020</span>
+            <div>
+              <span class="tag">Education</span>
+              <h3>B.Tech Mechanical Engineering</h3>
+              <p class="where">Mangalam College of Engineering, Kottayam (APJ Abdul Kalam Technological University), Kerala, India</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ EARLIER WORK, ACHIEVEMENTS, LANGUAGES ============ -->
+    <section class="block" id="achievements">
+      <div class="wrap">
+        <div class="section-head"><span class="label">05 · Also</span><h2>Earlier work and more</h2></div>
+        <div class="also">
+          <div>
+            <h3 class="sub">Earlier work</h3>
+            <div class="earlier" id="earlier-list"></div>
+          </div>
+          <div class="also-side">
+            <div>
+              <h3 class="sub">Competitions</h3>
+              <ul class="facts">
+                <li><span class="k">2025</span><span>SIEMENS x BEST Engineering Competition</span></li>
+                <li><span class="k">2024</span><span>SPS Makeathon, Nuremberg: motion bot, built in a team with Baumüller engineers</span></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="sub">Languages</h3>
+              <ul class="facts">
+                <li><span class="k">English</span><span>Full professional (C1)</span></li>
+                <li><span class="k">German</span><span>A2 course in progress</span></li>
+                <li><span class="k">Malayalam</span><span>Native</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="block contact-band" id="contact">
+      <div class="wrap">
+        <div class="section-head"><span class="label">06 · Contact</span><h2>Get in touch</h2></div>
+        <div class="contact">
+          <div class="email-row">
+            <span class="email" id="email">aravindajithkumar02@gmail.com</span>
+            <button class="btn" type="button" id="copy-email">Copy</button>
+            <a class="btn" href="mailto:aravindajithkumar02@gmail.com">Write email</a>
+          </div>
+          <div class="actions">
+            <a class="btn" href="https://www.linkedin.com/in/aravind-ajithkumar02" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://github.com/aravindajithkumar02" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn primary" href="assets/Aravind_Ajithkumar_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>© <span id="year">2026</span> Aravind Ajithkumar</span>
+      <span>Last updated: October 2026</span>
+    </div>
+  </footer>
+
+  <script src="data/projects.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/arm.js"></script>
+</body>
+</html>
