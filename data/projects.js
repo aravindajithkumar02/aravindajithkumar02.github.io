@@ -42,7 +42,7 @@ window.SITE_DATA = {
       tagline: "Standalone Python · Isaac Sim 6.1",
       period: "2026 – present",
       status: "in-progress",
-      progress: "Step 3 of 9",
+      progress: "Step 4 of 9",
       summary:
         "Industrial robot cells are planned in simulation before any hardware moves. I'm building a palletizing cell in NVIDIA Isaac Sim, scripted in standalone Python: a KUKA KR210 that will pick boxes from an infeed table and stack them on a Euro pallet.",
       did: [
@@ -57,7 +57,7 @@ window.SITE_DATA = {
         "Pallet pattern generator and palletizing state machine",
         "Validation runs with measured results"
       ],
-      result: "Steps 1 and 2 of 9 done, step 3 in progress. Each step is a separate, runnable script on GitHub.",
+      result: "Steps 1 to 3 of 9 done, step 4 in progress. Each step is a separate, runnable script on GitHub.",
       tools: ["NVIDIA Isaac Sim 6.1", "Python", "USD", "PhysX", "Git", "Linux"],
       images: [
         {
