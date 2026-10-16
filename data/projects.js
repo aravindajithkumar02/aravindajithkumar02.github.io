@@ -115,7 +115,7 @@ window.SITE_DATA = {
         { label: "QR reader", text: "I redesigned the reader body with an integrated marker holder, so the operator picks up one tool instead of two. Saves 2–3 s." },
         { label: "Head guide", text: "Co-designed with a fellow intern: a two-stage auto-lock that stops cylinder heads from queuing between lines." }
       ],
-      result: "Implemented on the line. Together the three kaizens cut cycle time by 17 s per engine.",
+      result: "Implemented on the line. Together the three kaizens cut cycle time by 17 s per engine, which the plant estimated at about 20 additional engines per shift.",
       tools: ["SolidWorks", "Standardized work", "Muda analysis", "Kaizen", "Toyota Production System"],
       images: [
         {
