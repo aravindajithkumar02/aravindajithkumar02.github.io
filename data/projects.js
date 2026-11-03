@@ -38,9 +38,9 @@ window.SITE_DATA = {
       id: "so101-arm",
       title: "SO-101 robot arm: build, commissioning and pick-and-place",
       context: "Personal project · open-source SO-101 design (LeRobot)",
-      period: "10/2026 – present",
-      status: "in-progress",
-      progress: "Pick-and-place working",
+      period: "10/2026",
+      status: "done",
+      progress: "Working pick-and-place",
       tagline: "6-DOF arm · hardware integration · teach-in · Python",
       summary:
         "The SO-101 is an open-source 6-DOF arm built for robot-learning research. I printed and assembled the follower arm, commissioned it with Hugging Face's LeRobot framework, and programmed a pick-and-place task from taught waypoints with interpolated motion.",
@@ -78,7 +78,7 @@ window.SITE_DATA = {
       tagline: "Standalone Python · Isaac Sim 6.1",
       period: "2026 – present",
       status: "in-progress",
-      progress: "Step 4 of 9",
+      progress: "Cell built · motion control next",
       summary:
         "Industrial robot cells are planned in simulation before any hardware moves. I'm building a palletizing cell in NVIDIA Isaac Sim, scripted in standalone Python: a KUKA KR210 that will pick boxes from an infeed table and stack them on a Euro pallet.",
       did: [
@@ -93,7 +93,7 @@ window.SITE_DATA = {
         "Pallet pattern generator and palletizing state machine",
         "Validation runs with measured results"
       ],
-      result: "Steps 1 to 3 of 9 done, step 4 in progress. Each step is a separate, runnable script on GitHub.",
+      result: "A to-scale palletizing cell scripted entirely in standalone Python: robot loaded and verified, table, pallet, floor and lighting in place. Each stage is a separate, runnable script on GitHub.",
       tools: ["NVIDIA Isaac Sim 6.1", "Python", "USD", "PhysX", "Git", "Linux"],
       images: [
         {
@@ -114,21 +114,21 @@ window.SITE_DATA = {
       tagline: "Tension control · CAD · 3D printing",
       period: "04/2026 – present",
       status: "in-progress",
-      progress: "Waiting for electronics",
+      progress: "Electronics integration",
       summary:
         "Winding tape onto a curved coil with a robot only works if the tape tension stays constant while the robot's speed keeps changing. I'm developing a lightweight tool for a UR10 robot that feeds the tape and controls its tension.",
       did: [
         "Designed the tool in Fusion 360 and SolidWorks and produced its parts by FDM 3D printing.",
         "Chose the tension sensing: a spring-loaded dancer roller read by a time-of-flight sensor. The spring keeps the reading independent of tool orientation; a potentiometer was rejected because its contact friction disturbs the measurement.",
         "Selected the drive and control hardware: stepper motor, driver and ESP32 microcontroller.",
-        "Designing a PID-based tension controller with feedforward from the robot speed, and writing the firmware in C++ ahead of hardware delivery."
+        "Designing a PID-based tension controller with feedforward from the robot speed, and writing the firmware in C++."
       ],
       next: [
-        "Electronics integration once the ordered parts arrive",
-        "Controller tuning and validation on the robot"
+        "Controller tuning on the test setup",
+        "Validation on the UR10 robot"
       ],
       highlight: "Images after clearance",
-      result: "Design and component selection done, electronics ordered. Integration, tuning and tests follow once the parts arrive.",
+      result: "Tool designed and printed, components selected and delivered. Electronics integration is under way; controller tuning and tests on the robot follow.",
       tools: ["Fusion 360", "SolidWorks", "FDM 3D printing", "ESP32", "C++", "PID control", "LaTeX"],
       images: [],
       links: [],
