@@ -14,7 +14,6 @@
     period    dates as text, e.g. "02/2020 – 03/2020" or "2026 – present"
     status    "in-progress" or "done"
     progress  optional short note shown next to the status, e.g. "Step 3 of 9"
-    summary   1–2 sentences: what it is
     summary   the problem and the idea, in 1–2 sentences
     did       "My part": list of things YOU did (each one must be defendable in an interview).
               An item can be plain text, or { label: "Design", text: "..." } for a bold lead-in.
@@ -35,6 +34,43 @@
 
 window.SITE_DATA = {
   projects: [
+    {
+      id: "so101-arm",
+      title: "SO-101 robot arm: build, commissioning and pick-and-place",
+      context: "Personal project · open-source SO-101 design (LeRobot)",
+      period: "10/2026 – present",
+      status: "in-progress",
+      progress: "Pick-and-place working",
+      tagline: "6-DOF arm · hardware integration · teach-in · Python",
+      summary:
+        "The SO-101 is an open-source 6-DOF arm built for robot-learning research. I printed and assembled the follower arm, commissioned it with Hugging Face's LeRobot framework, and programmed a pick-and-place task from taught waypoints with interpolated motion.",
+      did: [
+        { label: "Build and hardware integration", text: "Printed the structural parts myself on my Creality Ender 3 S1 in PLA and PETG, assembled the six Feetech STS3215 serial bus servo actuators, set the motor IDs (1 to 6, base to gripper), and routed the cabling with the driver board at the base so the bus cable does not travel with the arm." },
+        { label: "Commissioning and calibration", text: "Brought the arm up on Windows over the serial bus and calibrated all six joints with LeRobot, including joint zero positions and encoder ranges (4096 ticks per revolution)." },
+        { label: "Motion programming", text: "Taught the pick-and-place positions by reading joint positions with my own Python script, stored them as waypoints, and interpolated between them for smooth motion. The arm moves from upright to home, picks up a screwdriver and returns." },
+        { label: "Troubleshooting and root-cause analysis", text: "Traced a motor timeout to a loose connector between servos 2 and 3; found that wrist flex stops at about 2300 of 4096 ticks because of the printed geometry, not the software; added a keep-alive loop after finding that the arm lost holding torque whenever a script ended." },
+        { label: "Documentation", text: "Documented the build, calibration, scripts and every fault I fixed in the GitHub README, together with the print files and a demo video." }
+      ],
+      result: "A commissioned 6-DOF arm performing pick-and-place of a screwdriver from taught waypoints, shown in the demo video.",
+      next: [
+        "Wiring diagram",
+        "Teleoperation with a leader arm",
+        "ROS 2 integration"
+      ],
+      tools: ["Python 3.12", "LeRobot v0.6.2", "Feetech STS3215 servos", "Serial bus", "Hardware integration", "Commissioning", "Joint calibration", "Teach-in / waypoints", "Trajectory interpolation", "Root-cause analysis", "FDM 3D printing (PLA, PETG)", "Git"],
+      images: [
+        {
+          src: "assets/img/so101-arm.jpg",
+          alt: "White 3D-printed SO-101 robot arm on a desk, gripper angled down towards the table",
+          caption: "The arm I printed and built, approaching the pick position."
+        }
+      ],
+      links: [
+        { label: "Demo video on YouTube", url: "https://youtu.be/baFJPxRAoQY" },
+        { label: "Code, print files and build notes on GitHub", url: "https://github.com/aravindajithkumar02/so101-follower-arm" }
+      ]
+    },
+
     {
       id: "isaac-kuka",
       title: "KUKA KR210 palletizing cell in NVIDIA Isaac Sim",
