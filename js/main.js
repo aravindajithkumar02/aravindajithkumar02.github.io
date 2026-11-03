@@ -114,7 +114,7 @@
     }
     if (p.next && p.next.length) {
       var next = el("div");
-      next.appendChild(el("h4", "label", "Next"));
+      next.appendChild(el("h4", "label", p.status === "done" ? "Planned extensions" : "Planned next"));
       next.appendChild(list(p.next, "next"));
       dialogBody.appendChild(next);
     }
