@@ -121,7 +121,8 @@ window.SITE_DATA = {
         "Designed the tool in Fusion 360 and SolidWorks and produced its parts by FDM 3D printing.",
         "Chose the tension sensing: a spring-loaded dancer roller read by a time-of-flight sensor. The spring keeps the reading independent of tool orientation; a potentiometer was rejected because its contact friction disturbs the measurement.",
         "Selected the drive and control hardware: stepper motor, driver and ESP32 microcontroller.",
-        "Designing a PID-based tension controller with feedforward from the robot speed, and writing the firmware in C++."
+        "Designing a PID-based tension controller with feedforward from the robot speed, and writing the firmware in C++.",
+        "Simulated the ESP32 firmware and wiring in BenchTwin before the hardware arrived, so the circuit and code were checked before integration."
       ],
       next: [
         "Controller tuning on the test setup",
@@ -129,7 +130,7 @@ window.SITE_DATA = {
       ],
       highlight: "Images after clearance",
       result: "Tool designed and printed, components selected and delivered. Electronics integration is under way; controller tuning and tests on the robot follow.",
-      tools: ["Fusion 360", "SolidWorks", "FDM 3D printing", "ESP32", "C++", "PID control", "LaTeX"],
+      tools: ["Fusion 360", "SolidWorks", "FDM 3D printing", "ESP32", "C++", "PID control", "Electronics simulation (BenchTwin)", "LaTeX"],
       images: [],
       links: [],
       note: "University project. Further details and images will follow once cleared with my supervisor."
